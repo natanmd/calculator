@@ -54,6 +54,7 @@ html {
 .plus,
 .minus,
 .mult,
-.divide {
+.divide,
+.decimal {
     width: 60px;
 }

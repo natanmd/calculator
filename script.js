@@ -70,10 +70,10 @@ function clearData(){
     display.textContent = "";
 }
 
-var btn = document.querySelector(".clear");
+btn = document.querySelector(".clear");
 btn.addEventListener("click", clearData);
 
-var btn = document.querySelector(".plus");
+btn = document.querySelector(".plus");
 btn.addEventListener("click", () => {
     if(!isOperable){
         operator = "+";
@@ -95,7 +95,7 @@ btn.addEventListener("click", () => {
     }
 });
 
-var btn = document.querySelector(".minus");
+btn = document.querySelector(".minus");
 btn.addEventListener("click", () => {
     if(!isOperable){
         operator = "-";
@@ -117,7 +117,7 @@ btn.addEventListener("click", () => {
     }
 });
 
-var btn = document.querySelector(".mult");
+btn = document.querySelector(".mult");
 btn.addEventListener("click", () => {
     if(!isOperable){
         operator = "*";
@@ -139,7 +139,7 @@ btn.addEventListener("click", () => {
     }
 });
 
-var btn = document.querySelector(".divide");
+btn = document.querySelector(".divide");
 btn.addEventListener("click", () => {
     if(!isOperable){
         operator = "/";
@@ -161,7 +161,7 @@ btn.addEventListener("click", () => {
     }
 });
 
-var btn = document.querySelector(".equal");
+btn = document.querySelector(".equal");
 btn.addEventListener("click", () => {
     if(!isOperable || num2 === ""){
         return;
@@ -178,3 +178,16 @@ btn.addEventListener("click", () => {
         display.textContent = `${num1}`;
     }
 });
+
+btn = document.querySelector(".decimal");
+btn.addEventListener("click", () => {
+    if(!isOperable){
+        if(num1.includes(".")){return}
+        num1 = `${num1}.`;
+        display.textContent = `${num1}`;
+    } else {
+        if(num2.includes(".")){return}
+        num2 = `${num2}.`;
+        display.textContent = `${num1} ${operator} ${num2}`;
+    }
+})
