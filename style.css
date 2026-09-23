@@ -1,3 +1,7 @@
+html {
+    background-color: rgb(54, 53, 53);
+}
+
 .calculator{
     background-color: darkgray;
     margin-left: 20px;
