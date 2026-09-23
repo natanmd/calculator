@@ -84,7 +84,7 @@ btn.addEventListener("click", () => {
         display.textContent = `${num1} +`;
     } else {
         num1 = operate(num1, num2, operator);
-        if(num1 === NaN){
+        if(Number.isNaN(num1)){
             clearData();
             display.textContent = "i dont think so";
             return;
@@ -106,7 +106,7 @@ btn.addEventListener("click", () => {
         display.textContent = `${num1} -`;
     } else {
         num1 = operate(num1, num2, operator);
-        if(num1 === NaN){
+        if(Number.isNaN(num1)){
             clearData();
             display.textContent = "i dont think so";
             return;
@@ -128,7 +128,7 @@ btn.addEventListener("click", () => {
         display.textContent = `${num1} *`;
     } else {
         num1 = operate(num1, num2, operator);
-        if(num1 === NaN){
+        if(Number.isNaN(num1)){
             clearData();
             display.textContent = "i dont think so";
             return;
@@ -150,7 +150,7 @@ btn.addEventListener("click", () => {
         display.textContent = `${num1} /`;
     } else {
         num1 = operate(num1, num2, operator);
-        if(num1 === NaN){
+        if(Number.isNaN(num1)){
             clearData();
             display.textContent = "i dont think so";
             return;
