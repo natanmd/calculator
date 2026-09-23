@@ -172,6 +172,7 @@ btn.addEventListener("click", () => {
             display.textContent = "i dont think so";
             return;
         }
+        num1 = `${num1}`;
         num2 = "";
         operator = "";
         isOperable = false;
@@ -188,6 +189,17 @@ btn.addEventListener("click", () => {
     } else {
         if(num2.includes(".")){return}
         num2 = `${num2}.`;
+        display.textContent = `${num1} ${operator} ${num2}`;
+    }
+})
+
+btn = document.querySelector(".backspace");
+btn.addEventListener("click", () => {
+    if(!isOperable){
+        num1 = num1.slice(0, -1);
+        display.textContent = `${num1}`;
+    } else {
+        num2 = num2.slice(0, -1);
         display.textContent = `${num1} ${operator} ${num2}`;
     }
 })
