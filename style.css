@@ -1,3 +1,7 @@
+/* * { */
+    /* background-color: black; */
+/* } */
+
 .calculator{
     background-color: darkgray;
     margin-left: 20px;
@@ -5,6 +9,10 @@
     border-radius: 4px;
     padding: 16px;
     width: 450px;
+}
+
+.row {
+    background-color: darkgray;
 }
 
 #display {

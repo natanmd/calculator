@@ -1,4 +1,4 @@
-var num1 = null, num2 = null, operator = null, isOperable = false;
+var num1 = "", num2 = "", operator = "", isOperable = false;
 const display = document.getElementById("display");
 
 function add(a, b){
@@ -34,13 +34,18 @@ function operate(num1, num2, operator){
 function handleNumBtnEvent(number){
     if(!isOperable){
         num1 = `${num1}${number}`;
+        display.textContent = `${num1}`;
     } else {
         num2 = `${num2}${number}`;
     }
-
+    
 }
 
-for(var i = 0; i < 10; i++){
-    var btn = document.querySelector(`.num .${i}`);
-    btn.addEventListener("click", () => handleNumBtnEvent(i));
+for(let i = 0; i < 10; i++){
+    const btn = document.querySelector(`.btn.num${i}`);
+    console.log(`.btn.num${i}`);
+    btn.addEventListener("click", () => {
+        handleNumBtnEvent(i);
+        console.log(i);
+    });
 }
